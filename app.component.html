@@ -1,0 +1,22 @@
+<div>
+  <ejs-chart
+    #chart
+    id="chart-container"
+    [primaryXAxis]="primaryXAxis"
+    [primaryYAxis]="primaryYAxis"
+    height="50"
+  >
+    <e-series-collection>
+      <e-series
+        *ngFor="let chart of chartData; let i = index"
+        [dataSource]="chart.values"
+        type="StackingBar100"
+        xName="x"
+        yName="y"
+        columnWidth="0.4"
+        [cornerRadius]="radius"
+      >
+      </e-series>
+    </e-series-collection>
+  </ejs-chart>
+</div>
